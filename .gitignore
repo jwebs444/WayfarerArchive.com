@@ -2,6 +2,7 @@ artifacts/
 staging/
 packages/
 .pnpm-store/
+.tmp-r2-uploader/
 *.zip
 *.7z
 *.part
