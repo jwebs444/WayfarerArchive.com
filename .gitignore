@@ -1,0 +1,8 @@
+artifacts/
+staging/
+packages/
+.pnpm-store/
+*.zip
+*.7z
+*.part
+*.log

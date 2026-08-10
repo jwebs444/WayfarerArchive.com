@@ -1,0 +1,14 @@
+﻿{
+    "schemaVersion":  1,
+    "verifiedUtc":  "2026-08-10T18:52:02.8230193Z",
+    "sourceManifest":  "E:\\PreservationProject\\Documentation\\XOWA_IMAGE_CACHE_MANIFEST.csv",
+    "total":  334,
+    "included":  313,
+    "excluded":  21,
+    "decisions":  {
+                      "EXCLUDE_LICENSE_REVIEW":  6,
+                      "EXCLUDE_MISSING_CREDIT":  13,
+                      "EXCLUDE_MISSING_REMOTE_RECORD":  2,
+                      "INCLUDE":  313
+                  }
+}
