@@ -16,16 +16,11 @@ export default function Home() {
             <p className="wayfinding">Wayfarer&apos;s Archive · Field Edition I</p>
             <h1 id="hero-title">A refuge for knowledge <em>at the edge of the signal.</em></h1>
             <p className="hero-copy">Carry a working encyclopedia through dead zones, broken infrastructure, and the ordinary places the network does not reach. Make the archive freely—or receive one prepared in a small workshop batch.</p>
-            <div className="hero-actions">
-              <a className="stone-button sun-button" href="/build">Enter with an empty drive</a>
-              <a className="quiet-link" href="/founding-batch">Seek a finished archive <span aria-hidden="true">→</span></a>
-            </div>
           </div>
-          <aside className="threshold-plaque" aria-label="Archive edition details">
-            <p>Within the shelter</p>
-            <strong>Wikipedia · Kiwix · edition records</strong>
-            <span>125 GB class · Windows / macOS / Linux · no signal required</span>
-          </aside>
+          <div className="hero-actions">
+            <a className="stone-button sun-button" href="/build">Enter with an empty drive</a>
+            <a className="quiet-link" href="/founding-batch">Seek a finished archive <span aria-hidden="true">→</span></a>
+          </div>
         </section>
 
         <section className="chambers" aria-label="Ways to obtain the archive">
