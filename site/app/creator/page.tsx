@@ -35,6 +35,7 @@ export default function CreatorPage() {
         <section className="creator-principles">
           <article><span>Venture</span><p>Go toward wild, difficult, beautiful, or neglected things.</p></article>
           <article><span>Attend</span><p>Look closely enough to understand what deserves to return with you.</p></article>
+          <article><span>Play</span><p>Experiment freely, follow curiosity, and leave room for the unexpected to become useful.</p></article>
           <article><span>Return</span><p>Bring back photographs, language, practical maps—and now an offline library.</p></article>
         </section>
       </main>

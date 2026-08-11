@@ -44,5 +44,6 @@ test("serves detailed build, founding batch, and creator pages", async () => {
   const creatorHtml = await (await render("/creator")).text();
   assert.match(creatorHtml, /Mr\. Crowmeister/);
   assert.match(creatorHtml, /Go far\. Bring something back/);
+  assert.match(creatorHtml, /Venture[\s\S]*Attend[\s\S]*Play[\s\S]*Return/);
   assert.match(creatorHtml, /https:\/\/mrcrowmeister\.com/);
 });
