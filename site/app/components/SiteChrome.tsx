@@ -4,7 +4,7 @@ export function SiteHeader() {
   return (
     <header className="gatehouse">
       <a className="seal" href="/" aria-label="Wayfarer's Archive home">
-        <span className="seal-mark" aria-hidden="true">WA</span>
+        <span className="seal-mark" aria-hidden="true"><span>WA</span></span>
         <span><strong>Wayfarer&apos;s Archive</strong><small>Knowledge kept beyond the signal</small></span>
       </a>
       <nav aria-label="Primary navigation">
