@@ -13,8 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     metadataBase: new URL(`${protocol}://${host}`),
-    alternates: { canonical: "/" },
-    openGraph: { title, description, url: "/", siteName: title, images: [{ url: image, width: 1200, height: 630, alt: "Wayfarer's Archive — a library sheltered in desert stone" }] },
+    openGraph: { title, description, siteName: title, images: [{ url: image, width: 1200, height: 630, alt: "Wayfarer's Archive — a library sheltered in desert stone" }] },
     twitter: { card: "summary_large_image", title, description, images: [image] },
   };
 }

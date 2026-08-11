@@ -1,28 +1,16 @@
-import FoundingBatchAction from "./components/FoundingBatchAction";
+import Link from "next/link";
+import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 
 const questions = [
   ["Must I buy a finished drive?", "No. The builder remains free. The workshop edition is simply for travelers who want a prepared, labeled, and individually tested copy."],
   ["What will the first edition contain?", "Current English Wikipedia in Kiwix, portable readers for the major desktop systems, rights-cleared media, launchers, attribution records, and verification tools."],
   ["Why is the founding batch not open yet?", "The pilot must reveal the true build time, media failure rate, packaging cost, and defensible shipping window before any money changes hands."],
-  ["Will it survive future updates?", "Editions are dated and preserved rather than silently overwritten. A later builder may create a newer archive without making the older record disappear."],
 ];
 
 export default function Home() {
   return (
     <>
-      <header className="gatehouse">
-        <a className="seal" href="#top" aria-label="Wayfarer's Archive home">
-          <span className="seal-mark" aria-hidden="true">WA</span>
-          <span><strong>Wayfarer&apos;s Archive</strong><small>Knowledge kept beyond the signal</small></span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="#make">Build a copy</a>
-          <a href="#commission">Founding batch</a>
-          <a href="#questions">Questions</a>
-          <a href="#project">The project</a>
-        </nav>
-      </header>
-
+      <SiteHeader />
       <main id="top">
         <section className="sanctuary" aria-labelledby="hero-title">
           <div className="approach">
@@ -30,8 +18,8 @@ export default function Home() {
             <h1 id="hero-title">A refuge for knowledge <em>at the edge of the signal.</em></h1>
             <p className="hero-copy">Carry a working encyclopedia through dead zones, broken infrastructure, and the ordinary places the network does not reach. Make the archive freely—or receive one prepared in a small workshop batch.</p>
             <div className="hero-actions">
-              <a className="stone-button sun-button" href="#make">Enter with an empty drive</a>
-              <a className="quiet-link" href="#commission">Seek a finished archive <span aria-hidden="true">↓</span></a>
+              <Link className="stone-button sun-button" href="/build">Enter with an empty drive</Link>
+              <Link className="quiet-link" href="/founding-batch">Seek a finished archive <span aria-hidden="true">→</span></Link>
             </div>
           </div>
           <aside className="threshold-plaque" aria-label="Archive edition details">
@@ -52,8 +40,7 @@ export default function Home() {
               <li><span>Gather the library</span><p>Wikipedia, portable readers, records, and rights-cleared media arrive in restartable stages.</p></li>
               <li><span>Seal the edition</span><p>The finished drive is accepted only after its manifest and critical files pass verification.</p></li>
             </ol>
-            <span className="stone-button disabled-stone" aria-disabled="true">Builder opens with Edition I</span>
-            <small>The release candidate is still undergoing rights and capacity review.</small>
+            <p className="card-note">The builder opens when Edition I clears rights, capacity, and launch testing.</p>
           </article>
 
           <article className="workshop-chamber" id="commission">
@@ -66,7 +53,6 @@ export default function Home() {
               <strong>Interest gathering · no payment collected</strong>
             </div>
             <p>We will first build a pilot and measure the work honestly. Only then will a fixed number of places open with a published price and credible departure window.</p>
-            <FoundingBatchAction />
           </article>
         </section>
 
@@ -88,18 +74,13 @@ export default function Home() {
           <div className="project-note">
             <p>Wayfarer&apos;s Archive is designed and maintained by Mr. Crowmeister as a practical preservation project: a way to carry useful knowledge beyond the reach of the network.</p>
             <div className="project-links">
-              <a className="stone-button sun-button" href="https://mrcrowmeister.com" target="_blank" rel="noreferrer">Visit MrCrowmeister.com <span aria-hidden="true">↗</span></a>
+              <Link className="stone-button sun-button" href="/creator">Meet the Creator <span aria-hidden="true">→</span></Link>
               <a className="quiet-link light-link" href="https://www.patreon.com/c/MrCrowmeister" target="_blank" rel="noreferrer">Support the work on Patreon <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </section>
       </main>
-
-      <footer>
-        <div className="footer-seal"><span>WA</span><strong>Wayfarer&apos;s Archive</strong></div>
-        <p>Offline knowledge, carried carefully.</p>
-        <p>Field Edition I · August 2026</p>
-      </footer>
+      <SiteFooter />
     </>
   );
 }
