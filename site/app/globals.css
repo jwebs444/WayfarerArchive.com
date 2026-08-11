@@ -197,7 +197,7 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
   .creator-hero { background-position: 42% center; justify-content: flex-start; min-height: 48rem; padding: 9rem 1.3rem 5rem; }
   .creator-hero::before { background: linear-gradient(180deg, rgba(12,10,8,.06) 25%, rgba(12,10,8,.9)); content: ""; inset: 0; position: absolute; }
   .creator-hero > div { align-self: end; max-width: none; position: relative; width: 100%; }
-  .creator-hero h1 { font-size: clamp(3rem, 13.5vw, 4.5rem); max-width: 100%; }
+  .creator-hero h1 { font-size: clamp(2.7rem, 12vw, 4.25rem); max-width: 100%; }
   .creator-principles { grid-template-columns: 1fr; }
   .creator-principles article, .creator-principles article:first-child, .creator-principles article:nth-child(odd), .creator-principles article:nth-child(n+3) { border-left: 0; border-top: 1px solid rgba(65,45,31,.32); margin-top: 0; padding: 2rem 0; }
   .stone-button, .button { max-width: 100%; text-align: center; }
