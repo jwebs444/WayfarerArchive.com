@@ -156,6 +156,7 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
 .footer-seal span { border: 1px solid #806748; border-radius: 50%; font-family: Georgia, serif; font-size: .52rem; padding: .55rem; }
 
 @media (max-width: 1040px) {
+  .sanctuary { background-position: 88% center; }
   .chambers { grid-template-columns: 1fr; }
   .chambers article { min-height: auto; }
   .workshop-chamber { background-size: cover; }
@@ -171,7 +172,7 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
   .gatehouse nav { gap: 1rem; width: 100%; }
   .gatehouse nav a { font-size: .48rem; }
   .seal small { display: none; }
-  .sanctuary { align-items: end; background-position: 64% center; min-height: 48rem; padding: 8rem 1.2rem 3rem; }
+  .sanctuary { align-items: end; background-position: 92% center; min-height: 48rem; padding: 8rem 1.2rem 3rem; }
   .sanctuary::before { background: linear-gradient(90deg, rgba(11,10,9,.8), rgba(11,10,9,.16)), linear-gradient(180deg, transparent 26%, rgba(10,8,7,.9)); }
   h1 { font-size: clamp(3.5rem, 17vw, 5.5rem); }
   .hero-copy { font-size: .95rem; }
