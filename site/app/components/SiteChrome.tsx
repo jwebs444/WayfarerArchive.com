@@ -9,9 +9,10 @@ export function SiteHeader() {
       </a>
       <nav aria-label="Primary navigation">
         <a href="/build">Build a copy</a>
-        <a href="/build-beyond">Build beyond</a>
         <a href="/founding-batch">Founding batch</a>
         <a href="/creator">The Creator</a>
+        <a href="/build-beyond">Personal library</a>
+        <a className="support-link" href="https://www.patreon.com/c/MrCrowmeister" target="_blank" rel="noreferrer">Support <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
   );

@@ -31,6 +31,8 @@ img { display: block; height: auto; max-width: 100%; }
 .gatehouse nav { display: flex; gap: clamp(1.2rem, 3vw, 3rem); }
 .gatehouse nav a { border-bottom: 1px solid transparent; color: #e0d0b5; font-size: .58rem; font-weight: 700; letter-spacing: .17em; padding: .6rem 0; text-decoration: none; text-transform: uppercase; transition: border-color .2s, color .2s; }
 .gatehouse nav a:hover, .gatehouse nav a:focus-visible { border-color: var(--gold); color: #fff0d0; }
+.gatehouse nav .support-link { border: 1px solid rgba(224,208,181,.72); padding: .72rem .9rem; }
+.gatehouse nav .support-link:hover, .gatehouse nav .support-link:focus-visible { background: #d6a35f; border-color: #d6a35f; color: #1e1813; }
 
 .sanctuary { align-items: end; background: #17130f; color: #f4e5c9; display: grid; isolation: isolate; min-height: max(48rem, 100svh); overflow: hidden; padding: 9rem clamp(1.2rem, 7vw, 8rem) clamp(3rem, 7vh, 5.5rem); position: relative; }
 .sanctuary::before { background-image: linear-gradient(90deg, #17130f 0%, rgba(23,19,15,.68) 8%, rgba(23,19,15,.06) 28%), linear-gradient(180deg, rgba(9,8,7,.08) 42%, rgba(9,8,7,.58) 100%), url('/hero-library-interior.png'); background-position: center, center, 84% 52%; background-repeat: no-repeat; background-size: cover; content: ""; inset: 0 0 0 44%; position: absolute; z-index: 0; }
@@ -53,6 +55,12 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .button-disabled { background: rgba(26,20,16,.72); border-color: rgba(232,207,168,.42); color: #c9b99f; cursor: not-allowed; }
 .quiet-link { color: inherit; font-size: .58rem; font-weight: 750; letter-spacing: .15em; text-decoration-color: rgba(255,232,193,.6); text-underline-offset: .38rem; text-transform: uppercase; }
 .quiet-link span { display: inline-block; margin-left: .4rem; }
+
+@media (min-width: 1041px) {
+  .hero-actions { align-items: stretch; left: 50vw; right: auto; width: min(20.5rem, 30vw); }
+  .hero-actions > a { width: 100%; }
+  .hero-actions .quiet-link { align-items: center; display: flex; justify-content: center; text-align: center; }
+}
 .chambers h2, .questions h2, .project-origin h2 { font-size: clamp(2.8rem, 5.4vw, 6rem); font-weight: 500; letter-spacing: -.055em; line-height: .9; margin: 0; }
 
 .chambers { background: #251c16; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
@@ -206,11 +214,15 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
   .gatehouse { align-items: flex-start; flex-direction: column; gap: .65rem; justify-content: center; min-height: 112px; padding: .85rem; }
   .gatehouse nav { display: grid; gap: 0 .8rem; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
   .gatehouse nav a { font-size: .48rem; letter-spacing: .11em; padding: .38rem 0; }
+  .gatehouse nav .support-link { justify-self: start; padding: .5rem .65rem; }
   .seal small { display: none; }
   .sanctuary { align-items: end; min-height: auto; padding: 25rem 1.2rem 3.5rem; }
   .sanctuary::before { background-image: linear-gradient(180deg, rgba(9,8,7,.02) 50%, #17130f 100%), url('/hero-library-interior.png'); background-position: center, 86% 52%; height: 23rem; }
   h1 { font-size: clamp(3.15rem, 14.5vw, 5.5rem); }
   .hero-copy { font-size: .95rem; }
+  .hero-actions { align-items: stretch; flex-direction: column; width: min(100%, 22rem); }
+  .hero-actions > a { width: 100%; }
+  .hero-actions .quiet-link { align-items: center; display: flex; justify-content: center; text-align: center; }
   .chambers article, .questions, .project-origin { padding: 5.5rem 1.3rem; }
   .workshop-chamber { background-position: center, 74% 52%; }
   .project-origin { background-position: center, 10% bottom; background-size: cover, auto 140%; }

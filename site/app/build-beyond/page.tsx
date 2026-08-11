@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Build Beyond | Wayfarer's Archive",
+  title: "Personal Library | Wayfarer's Archive",
   description: "Extend a Wayfarer's Archive drive with books, lectures, maps, and personal records you obtain and keep yourself.",
 };
 
