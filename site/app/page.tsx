@@ -30,7 +30,6 @@ export default function Home() {
 
       <main id="top">
         <section className="sanctuary" aria-labelledby="hero-title">
-          <div className="wind-lines" aria-hidden="true"><i /><i /><i /></div>
           <div className="approach">
             <p className="wayfinding">Wayfarer&apos;s Archive · Field Edition I</p>
             <h1 id="hero-title">A refuge for knowledge <em>at the edge of the signal.</em></h1>
@@ -40,19 +39,11 @@ export default function Home() {
               <a className="quiet-link" href="#commission">Seek a finished archive <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-
-          <div className="stone-sanctum" aria-label="Archive edition details">
-            <div className="outer-stone"><div className="inner-shadow"><div className="archive-light" /></div></div>
-            <div className="inscription">
-              <p>Inscription · edition in preparation</p>
-              <dl>
-                <div><dt>Vessel</dt><dd>125 GB class</dd></div>
-                <div><dt>Reader</dt><dd>Kiwix</dd></div>
-                <div><dt>Hosts</dt><dd>Windows · macOS · Linux</dd></div>
-                <div><dt>Builder</dt><dd>Free</dd></div>
-              </dl>
-            </div>
-          </div>
+          <aside className="threshold-plaque" aria-label="Archive edition details">
+            <p>Within the shelter</p>
+            <strong>Wikipedia · Kiwix · edition records</strong>
+            <span>125 GB class · Windows / macOS / Linux · no signal required</span>
+          </aside>
         </section>
 
         <section className="threshold" id="threshold">
@@ -61,7 +52,10 @@ export default function Home() {
             <h2>The archive is not a monument. It is a place to take cover.</h2>
           </div>
           <p className="threshold-note">The desert is not decoration here. It is the condition that gives the library meaning: distance, scarcity, interrupted routes, and the need to carry what matters. The stone represents the opposite—shade, patience, memory, and a structure made to remain.</p>
-          <div className="door-shadow" aria-hidden="true" />
+          <figure className="threshold-photo">
+            <div role="img" aria-label="The illuminated archive shelves seen through the shelter entrance" />
+            <figcaption>Past the wind line, the reference room remains ready.</figcaption>
+          </figure>
         </section>
 
         <section className="chambers" aria-label="Ways to obtain the archive">
