@@ -20,6 +20,7 @@ test("server-renders the Wayfarer's Archive storefront", async () => {
   assert.match(html, /<title>Wayfarer(?:'|&#x27;)s Archive<\/title>/i);
   assert.match(html, /A refuge for knowledge/);
   assert.match(html, /href="\/build"/);
+  assert.match(html, /href="\/build-beyond"/);
   assert.match(html, /href="\/founding-batch"/);
   assert.match(html, /href="\/creator"/);
   assert.match(html, /Make the same archive yourself/);
@@ -32,10 +33,16 @@ test("server-renders the Wayfarer's Archive storefront", async () => {
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|chatgpt\.site/i);
 });
 
-test("serves detailed build, founding batch, and creator pages", async () => {
+test("serves detailed build, build-beyond, founding batch, and creator pages", async () => {
   const buildHtml = await (await render("/build")).text();
   assert.match(buildHtml, /Build the refuge yourself/);
   assert.match(buildHtml, /What Edition I carries/);
+
+  const beyondHtml = await (await render("/build-beyond")).text();
+  assert.match(beyondHtml, /Build beyond the archive/);
+  assert.match(beyondHtml, /The creator(?:'|&#x27;)s field shelf/);
+  assert.match(beyondHtml, /does not redistribute the third-party works/);
+  assert.match(beyondHtml, /https:\/\/www\.wescecil\.com/);
 
   const foundingHtml = await (await render("/founding-batch")).text();
   assert.match(foundingHtml, /A finished archive, made at a human pace/);

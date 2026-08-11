@@ -15,6 +15,8 @@
 html { background: var(--ink); scroll-behavior: smooth; }
 body { margin: 0; overflow-x: hidden; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; text-rendering: optimizeLegibility; }
 a { color: inherit; }
+img { display: block; height: auto; max-width: 100%; }
+.focal-image { height: 100%; object-fit: cover; object-position: var(--focus-x, 50%) var(--focus-y, 50%); width: 100%; }
 ::selection { background: var(--gold); color: var(--ink); }
 
 .gatehouse { align-items: center; background: linear-gradient(180deg, rgba(13,11,9,.78), rgba(13,11,9,.18), transparent); color: #f1dfbd; display: flex; inset: 0 0 auto; justify-content: space-between; min-height: 92px; padding: 0 clamp(1.1rem, 4.5vw, 5rem); position: absolute; z-index: 10; }
@@ -28,7 +30,7 @@ a { color: inherit; }
 .gatehouse nav a { border-bottom: 1px solid transparent; color: #e0d0b5; font-size: .58rem; font-weight: 700; letter-spacing: .17em; padding: .6rem 0; text-decoration: none; text-transform: uppercase; transition: border-color .2s, color .2s; }
 .gatehouse nav a:hover, .gatehouse nav a:focus-visible { border-color: var(--gold); color: #fff0d0; }
 
-.sanctuary { align-items: end; background: #281d15 url('/hero-library-interior.png') center center / cover no-repeat; color: #f4e5c9; display: grid; isolation: isolate; min-height: max(48rem, 100svh); overflow: hidden; padding: 9rem clamp(1.2rem, 7vw, 8rem) clamp(3rem, 7vh, 5.5rem); position: relative; }
+.sanctuary { align-items: end; background: #281d15 url('/hero-library-interior.png') 78% 52% / cover no-repeat; color: #f4e5c9; display: grid; isolation: isolate; min-height: max(48rem, 100svh); overflow: hidden; padding: 9rem clamp(1.2rem, 7vw, 8rem) clamp(3rem, 7vh, 5.5rem); position: relative; }
 .sanctuary::before { background: linear-gradient(90deg, rgba(11,10,9,.76) 0%, rgba(12,10,8,.48) 30%, rgba(12,10,8,.05) 63%), linear-gradient(180deg, rgba(9,8,7,.15) 35%, rgba(9,8,7,.72) 100%); content: ""; inset: 0; position: absolute; z-index: -1; }
 .sanctuary::after { box-shadow: inset 0 0 9rem rgba(0,0,0,.36); content: ""; inset: 0; pointer-events: none; position: absolute; z-index: -1; }
 .approach { max-width: 58rem; position: relative; text-shadow: 0 3px 24px #000; z-index: 2; }
@@ -59,7 +61,7 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .chambers { background: #251c16; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .chambers article { min-height: 50rem; padding: clamp(5rem, 8vw, 9rem); position: relative; }
 .open-chamber { background-color: #eee1c9; background-image: radial-gradient(circle at 15% 8%, rgba(255,250,234,.68), transparent 31%), repeating-linear-gradient(92deg, rgba(62,41,27,.024) 0 1px, transparent 1px 9px); }
-.workshop-chamber { background: linear-gradient(90deg, rgba(22,17,14,.92), rgba(25,19,15,.72)), url('/hero-library-interior.png') 88% center / cover no-repeat; color: #f1dfbd; }
+.workshop-chamber { background-color: #211913; background-image: linear-gradient(90deg, rgba(18,14,11,.94), rgba(20,15,12,.72) 58%, rgba(20,15,12,.38)), url('/founding-forge-workshop.png'); background-position: center, 74% 52%; background-repeat: no-repeat; background-size: cover; color: #f1dfbd; }
 .chamber-mark { color: rgba(92,67,47,.18); font-family: Georgia, serif; font-size: 12rem; line-height: .7; position: absolute; right: 5vw; top: 5rem; }
 .workshop-chamber .chamber-mark { color: rgba(241,223,189,.11); }
 .chambers .wayfinding { margin-bottom: 3rem; }
@@ -90,7 +92,7 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .question-stack details[open] summary span { transform: rotate(45deg); }
 .question-stack details p { color: #665a4e; line-height: 1.7; max-width: 45rem; }
 
-.project-origin { align-items: end; background-color: #17130f; background-image: linear-gradient(90deg, rgba(14,12,10,.94), rgba(14,12,10,.7) 55%, rgba(14,12,10,.25)), url('/crow-alabama-flight.jpg'); background-position: center, 16vw bottom; background-repeat: no-repeat; background-size: cover, 120% auto; color: #f0dfbf; display: grid; gap: clamp(3rem, 8vw, 9rem); grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .9fr); min-height: 38rem; padding: clamp(7rem, 10vw, 11rem) max(1.3rem, 8vw); }
+.project-origin { align-items: end; background-color: #17130f; background-image: linear-gradient(90deg, rgba(14,12,10,.94), rgba(14,12,10,.7) 55%, rgba(14,12,10,.25)), url('/crow-alabama-flight.jpg'); background-position: center, 27% 79%; background-repeat: no-repeat; background-size: cover; color: #f0dfbf; display: grid; gap: clamp(3rem, 8vw, 9rem); grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .9fr); min-height: 38rem; padding: clamp(7rem, 10vw, 11rem) max(1.3rem, 8vw); }
 .project-origin .wayfinding { color: #d0a36a; }
 .project-origin h2 { max-width: 56rem; text-shadow: 0 3px 18px #000; }
 .project-note { border-left: 1px solid rgba(231,210,177,.4); padding-left: clamp(1.5rem, 3vw, 3rem); }
@@ -99,7 +101,7 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .project-links .light-link { margin-top: 0; }
 
 .inner-page { background: #e9d8bb; }
-.inner-hero { align-items: end; background-color: #201914; background-position: center; background-size: cover; color: #f0dfbf; display: grid; gap: 7vw; grid-template-columns: minmax(0, 1.35fr) minmax(18rem, .65fr); min-height: 78svh; padding: 10rem max(1.3rem, 8vw) clamp(5rem, 9vw, 9rem); position: relative; }
+.inner-hero { align-items: end; background-color: #201914; background-repeat: no-repeat; background-size: cover; color: #f0dfbf; display: grid; gap: 7vw; grid-template-columns: minmax(0, 1.35fr) minmax(18rem, .65fr); min-height: 78svh; overflow: hidden; padding: 10rem max(1.3rem, 8vw) clamp(5rem, 9vw, 9rem); position: relative; }
 .inner-hero::before { background: linear-gradient(90deg, rgba(12,10,8,.9), rgba(12,10,8,.58) 62%, rgba(12,10,8,.28)); content: ""; inset: 0; position: absolute; }
 .inner-hero > * { position: relative; }
 .inner-hero h1 { font-size: clamp(4rem, 8vw, 8rem); max-width: 67rem; text-shadow: 0 3px 24px #000; }
@@ -108,12 +110,13 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .inner-hero aside span { color: #d2a66b; display: block; font-size: .55rem; font-weight: 750; letter-spacing: .18em; text-transform: uppercase; }
 .inner-hero aside strong { display: block; font-family: Georgia, serif; font-size: 1.35rem; font-weight: 500; margin: .65rem 0; }
 .inner-hero aside p { color: rgba(240,221,189,.68); font-size: .78rem; line-height: 1.65; margin: 0; }
-.build-hero { background-image: url('/hero-library-interior.png'); }
-.founding-hero { background-image: url('/hero-library-interior.png'); background-position: 72% center; }
+.build-hero { background-image: url('/hero-library-interior.png'); background-position: 78% 52%; }
+.founding-hero { background-image: url('/founding-forge-workshop.png'); background-position: 74% 52%; }
+.beyond-hero { background-image: url('/hero-library.png'); background-position: 76% 52%; }
 
 .content-ledger, .batch-path { padding: clamp(6rem, 9vw, 10rem) max(1.3rem, 8vw); }
 .ledger-heading { align-items: end; display: grid; gap: 2rem 6vw; grid-template-columns: .55fr 1.45fr; }
-.ledger-heading h2, .manifest-section h2, .release-gate h2, .field-copy h2, .founding-interest h2, .creator-story h2 { font-size: clamp(2.8rem, 5.4vw, 6rem); font-weight: 500; letter-spacing: -.055em; line-height: .9; margin: 0; }
+.ledger-heading h2, .manifest-section h2, .release-gate h2, .field-copy h2, .founding-interest h2, .creator-story h2, .reader-kit h2, .field-shelf h2, .annex-boundary h2 { font-size: clamp(2.8rem, 5.4vw, 6rem); font-weight: 500; letter-spacing: -.055em; line-height: .9; margin: 0; }
 .requirement-grid, .batch-steps { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 5rem; }
 .requirement-grid article, .batch-steps article { border-left: 1px solid rgba(63,43,29,.32); padding: 1rem clamp(1.5rem, 3vw, 3rem); }
 .requirement-grid article:first-child, .batch-steps article:first-child { padding-left: 0; border-left: 0; }
@@ -138,9 +141,9 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .founding-interest > div > p:last-child { color: #57493e; font-family: Georgia, serif; line-height: 1.7; }
 .founding-interest .button { flex: 0 0 auto; }
 
-.creator-hero { align-items: end; background: linear-gradient(90deg, rgba(13,11,9,.08) 35%, rgba(13,11,9,.78) 68%, rgba(13,11,9,.94)), url('/crow-on-red-fence.jpg') center / cover no-repeat; color: #f2dfbe; display: flex; justify-content: flex-end; min-height: 88svh; padding: 10rem max(1.3rem, 8vw) clamp(5rem, 8vw, 8rem); position: relative; }
-.creator-hero > div { max-width: 47rem; width: 48%; }
-.creator-hero h1 { font-size: clamp(4.5rem, 9vw, 9rem); }
+.creator-hero { align-items: end; background-color: #201914; background-image: linear-gradient(90deg, rgba(13,11,9,.08) 35%, rgba(13,11,9,.78) 68%, rgba(13,11,9,.94)), url('/crow-on-red-fence.jpg'); background-position: center, 28% 56%; background-repeat: no-repeat; background-size: cover; color: #f2dfbe; display: flex; justify-content: flex-end; min-height: 88svh; overflow: hidden; padding: 10rem max(1.3rem, 8vw) clamp(5rem, 8vw, 8rem); position: relative; }
+.creator-hero > div { max-width: 60rem; width: 58%; }
+.creator-hero h1 { font-size: clamp(4rem, 6.2vw, 7rem); }
 .creator-hero > div > p:last-child { color: #e3c38e; font-family: Georgia, serif; font-size: 1.3rem; }
 .photo-caption { bottom: 2rem; color: rgba(241,222,190,.65); font-size: .52rem; font-weight: 750; left: max(1.3rem, 4vw); letter-spacing: .16em; position: absolute; text-transform: uppercase; }
 .creator-story > div:last-child { align-self: end; font-family: Georgia, serif; font-size: 1.05rem; }
@@ -151,26 +154,49 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .creator-principles span { color: #745137; font-family: Georgia, serif; font-size: 1.5rem; }
 .creator-principles p { color: #5c4d41; line-height: 1.7; }
 
+.reader-kit { background: #211a15; color: #eddbbb; display: grid; gap: 8vw; grid-template-columns: minmax(15rem, .7fr) minmax(0, 1.3fr); padding: clamp(6rem, 9vw, 10rem) max(1.3rem, 8vw); }
+.reader-kit .wayfinding { color: #c89a61; }
+.reader-kit > div:first-child > p:last-child { color: rgba(239,220,188,.72); font-family: Georgia, serif; line-height: 1.8; margin-top: 2rem; }
+.format-grid { border-top: 1px solid rgba(235,214,179,.28); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.format-grid article { border-bottom: 1px solid rgba(235,214,179,.22); padding: 1.8rem 1.5rem 1.8rem 0; }
+.format-grid article:nth-child(even) { border-left: 1px solid rgba(235,214,179,.22); padding-left: 1.5rem; }
+.format-grid h3 { font-size: 1.25rem; margin: 0 0 .65rem; }
+.format-grid p { color: rgba(239,220,188,.7); line-height: 1.7; margin: 0; }
+
+.field-shelf { background-color: #ead9bc; background-image: radial-gradient(circle at 10% 10%, rgba(255,249,231,.62), transparent 32%), repeating-linear-gradient(92deg, rgba(62,41,27,.022) 0 1px, transparent 1px 9px); padding: clamp(6rem, 9vw, 10rem) max(1.3rem, 8vw); }
+.shelf-heading { display: grid; gap: 2rem 6vw; grid-template-columns: .45fr 1fr 1fr; }
+.shelf-heading > p:last-child { color: #65574a; line-height: 1.75; margin: 0; }
+.shelf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 5rem; }
+.shelf-grid article { border-left: 1px solid rgba(63,43,29,.32); border-top: 1px solid rgba(63,43,29,.32); min-height: 18rem; padding: 2.2rem clamp(1.5rem, 3vw, 3rem); }
+.shelf-grid article:nth-child(odd) { border-left: 0; padding-left: 0; }
+.shelf-grid h3 { font-size: 1.45rem; margin: 0 0 1rem; }
+.shelf-grid p { color: #615548; line-height: 1.72; }
+.shelf-grid a { color: #65452f; display: inline-block; font-size: .58rem; font-weight: 750; letter-spacing: .12em; margin-top: 1rem; text-decoration-thickness: 1px; text-underline-offset: .35rem; text-transform: uppercase; }
+.annex-boundary { background: #cdb08a; padding: clamp(6rem, 9vw, 9rem) max(1.3rem, 18vw); text-align: center; }
+.annex-boundary p:last-child { color: #57493e; font-family: Georgia, serif; line-height: 1.8; margin: 2rem auto 0; max-width: 52rem; }
+
 footer { align-items: center; background: #15120f; border-top: 1px solid #443124; color: rgba(233,216,187,.55); display: flex; font-size: .54rem; font-weight: 700; justify-content: space-between; letter-spacing: .13em; padding: 2.2rem clamp(1.1rem, 4.5vw, 5rem); text-transform: uppercase; }
 .footer-seal { align-items: center; color: #e2cfad; display: flex; gap: .8rem; }
 .footer-seal span { border: 1px solid #806748; border-radius: 50%; font-family: Georgia, serif; font-size: .52rem; padding: .55rem; }
 
 @media (max-width: 1040px) {
-  .sanctuary { background-position: 92% center; background-size: auto 90%; }
+  .sanctuary { background-position: 78% 52%; background-size: cover; }
   .sanctuary::before { background: linear-gradient(90deg, rgba(11,10,9,.8) 0%, rgba(12,10,8,.44) 48%, rgba(12,10,8,.06) 72%), linear-gradient(180deg, rgba(9,8,7,.04) 52%, rgba(9,8,7,.58) 100%); }
+  .threshold-plaque { justify-self: start; margin-top: 1.75rem; position: static; }
   .chambers { grid-template-columns: 1fr; }
   .chambers article { min-height: auto; }
-  .workshop-chamber { background-size: cover; }
+  .workshop-chamber { background-position: center, 74% 52%; background-size: cover; }
   .questions, .project-origin { grid-template-columns: 1fr; }
   .inner-hero { grid-template-columns: 1fr; }
   .inner-hero h1 { font-size: clamp(3.8rem, 10vw, 6.5rem); }
-  .founding-hero { background-position: 82% center; }
+  .founding-hero { background-position: 74% 52%; }
+  .beyond-hero { background-position: 76% 52%; }
   .requirement-grid, .batch-steps { grid-template-columns: 1fr; }
   .requirement-grid article, .batch-steps article, .requirement-grid article:first-child, .batch-steps article:first-child { border-left: 0; border-top: 1px solid rgba(63,43,29,.32); padding: 2rem 0; }
   .founding-interest { align-items: flex-start; flex-direction: column; }
-  .creator-hero { background-position: 38% center; }
-  .creator-hero > div { max-width: 42rem; width: 88%; }
-  .creator-hero h1 { font-size: clamp(4rem, 11vw, 6.5rem); }
+  .creator-hero { background-position: center, 28% 56%; }
+  .creator-hero > div { max-width: 42rem; width: 100%; }
+  .creator-hero h1 { font-size: clamp(3.8rem, 7vw, 5rem); }
   .creator-principles { grid-template-columns: repeat(2, 1fr); }
   .creator-principles article:nth-child(odd) { border-left: 0; padding-left: 0; }
   .creator-principles article:nth-child(n+3) { border-top: 1px solid rgba(65,45,31,.32); margin-top: 2rem; padding-top: 2rem; }
@@ -178,28 +204,34 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
 
 @media (max-width: 720px) {
   .gatehouse { align-items: flex-start; flex-direction: column; gap: .65rem; justify-content: center; min-height: 112px; padding: .85rem; }
-  .gatehouse nav { gap: .45rem; justify-content: space-between; width: 100%; }
-  .gatehouse nav a { font-size: clamp(.42rem, 2vw, .48rem); letter-spacing: .12em; }
+  .gatehouse nav { display: grid; gap: 0 .8rem; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  .gatehouse nav a { font-size: .48rem; letter-spacing: .11em; padding: .38rem 0; }
   .seal small { display: none; }
-  .sanctuary { align-items: end; background-position: 92% center; min-height: 48rem; padding: 8rem 1.2rem 3rem; }
+  .sanctuary { align-items: end; background-position: 86% 52%; min-height: 66rem; padding: 24rem 1.2rem 3rem; }
   .sanctuary::before { background: linear-gradient(90deg, rgba(11,10,9,.8), rgba(11,10,9,.16)), linear-gradient(180deg, transparent 26%, rgba(10,8,7,.9)); }
   h1 { font-size: clamp(3.15rem, 14.5vw, 5.5rem); }
   .hero-copy { font-size: .95rem; }
-  .threshold-plaque { margin-top: 2.5rem; max-width: none; position: static; }
+  .threshold-plaque { margin-top: 2.5rem; max-width: none; width: 100%; }
   .chambers article, .questions, .project-origin { padding: 5.5rem 1.3rem; }
-  .workshop-chamber { background-position: 76% center; }
+  .workshop-chamber { background-position: center, 74% 52%; }
+  .project-origin { background-position: center, 10% bottom; background-size: cover, auto 140%; }
   .project-note { border-left: 0; border-top: 1px solid rgba(231,210,177,.4); padding: 2rem 0 0; }
-  .inner-hero { min-height: 48rem; padding: 9rem 1.3rem 5.5rem; }
+  .inner-hero { min-height: 48rem; padding: 10rem 1.3rem 5.5rem; }
   .inner-hero h1 { font-size: clamp(3.1rem, 14vw, 5rem); }
-  .ledger-heading, .manifest-section, .field-copy, .creator-story { grid-template-columns: 1fr; }
-  .content-ledger, .batch-path, .manifest-section, .field-copy, .release-gate, .founding-interest, .creator-story, .creator-principles { padding: 5.5rem 1.3rem; }
+  .build-hero { background-position: 86% 52%; }
+  .founding-hero { background-position: 74% 52%; }
+  .beyond-hero { background-position: 76% 52%; }
+  .ledger-heading, .manifest-section, .field-copy, .creator-story, .reader-kit, .shelf-heading { grid-template-columns: 1fr; }
+  .content-ledger, .batch-path, .manifest-section, .field-copy, .release-gate, .founding-interest, .creator-story, .creator-principles, .reader-kit, .field-shelf, .annex-boundary { padding: 5.5rem 1.3rem; }
   .manifest-list article { gap: .5rem; grid-template-columns: 1fr; }
-  .creator-hero { background-position: 42% center; justify-content: flex-start; min-height: 48rem; padding: 9rem 1.3rem 5rem; }
+  .creator-hero { background-position: center, 28% 56%; justify-content: flex-start; min-height: 48rem; padding: 10rem 1.3rem 5rem; }
   .creator-hero::before { background: linear-gradient(180deg, rgba(12,10,8,.06) 25%, rgba(12,10,8,.9)); content: ""; inset: 0; position: absolute; }
   .creator-hero > div { align-self: end; max-width: none; position: relative; width: 100%; }
   .creator-hero h1 { font-size: clamp(2.7rem, 12vw, 4.25rem); max-width: 100%; }
   .creator-principles { grid-template-columns: 1fr; }
   .creator-principles article, .creator-principles article:first-child, .creator-principles article:nth-child(odd), .creator-principles article:nth-child(n+3) { border-left: 0; border-top: 1px solid rgba(65,45,31,.32); margin-top: 0; padding: 2rem 0; }
+  .format-grid, .shelf-grid { grid-template-columns: 1fr; }
+  .format-grid article, .format-grid article:nth-child(even), .shelf-grid article, .shelf-grid article:nth-child(odd) { border-left: 0; min-height: 0; padding: 1.8rem 0; }
   .stone-button, .button { max-width: 100%; text-align: center; }
   footer { align-items: flex-start; flex-direction: column; gap: .75rem; }
   footer p { margin: 0; }
