@@ -1,4 +1,4 @@
-# Wayfarer's Archive — public distribution
+# WayfarerArchive.com — public distribution
 
 This repository builds the commercially redistributable public edition of
 Wayfarer's Archive from a private reference drive without changing that drive.
@@ -17,4 +17,3 @@ collections. Run `tools/Resolve-WikimediaRights.ps1` before building, then run
 not mirror the source drive.
 
 This is a compliance-oriented engineering record, not legal advice.
-

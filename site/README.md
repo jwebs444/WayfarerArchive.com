@@ -1,4 +1,4 @@
-# Wayfarer's Archive website
+# WayfarerArchive.com website
 
 The public storefront for <https://wayfarerarchive.com>. It has two jobs:
 
@@ -22,7 +22,7 @@ pnpm dev
 ## Cloudflare deployment
 
 This is a vinext application deployed as a Cloudflare Worker, following the
-same shape as the LanceForward project.
+same deployment shape as LanceForward.com.
 
 - `wrangler.jsonc` declares the Worker and `wayfarerarchive.com` custom domain.
 - `pnpm build` creates the Cloudflare deployment bundle.
