@@ -61,7 +61,7 @@ export default function Home() {
         <section className="project-origin" id="project" aria-labelledby="project-title">
           <div>
             <p className="wayfinding">A Mr. Crowmeister project</p>
-            <h2 id="project-title">Knowledge for the road beyond the signal.</h2>
+            <h2 id="project-title">Knowledge for the road</h2>
           </div>
           <div className="project-note">
             <p>Wayfarer&apos;s Archive is designed and maintained by Mr. Crowmeister as a practical preservation project: a way to carry useful knowledge beyond the reach of the network.</p>
