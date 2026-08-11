@@ -1,16 +1,16 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-html-link-for-pages */
 
 export function SiteHeader() {
   return (
     <header className="gatehouse">
-      <Link className="seal" href="/" aria-label="Wayfarer's Archive home">
+      <a className="seal" href="/" aria-label="Wayfarer's Archive home">
         <span className="seal-mark" aria-hidden="true">WA</span>
         <span><strong>Wayfarer&apos;s Archive</strong><small>Knowledge kept beyond the signal</small></span>
-      </Link>
+      </a>
       <nav aria-label="Primary navigation">
-        <Link href="/build">Build a copy</Link>
-        <Link href="/founding-batch">Founding batch</Link>
-        <Link href="/creator">The Creator</Link>
+        <a href="/build">Build a copy</a>
+        <a href="/founding-batch">Founding batch</a>
+        <a href="/creator">The Creator</a>
       </nav>
     </header>
   );

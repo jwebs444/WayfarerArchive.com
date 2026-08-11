@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 
 const questions = [
@@ -18,8 +17,8 @@ export default function Home() {
             <h1 id="hero-title">A refuge for knowledge <em>at the edge of the signal.</em></h1>
             <p className="hero-copy">Carry a working encyclopedia through dead zones, broken infrastructure, and the ordinary places the network does not reach. Make the archive freely—or receive one prepared in a small workshop batch.</p>
             <div className="hero-actions">
-              <Link className="stone-button sun-button" href="/build">Enter with an empty drive</Link>
-              <Link className="quiet-link" href="/founding-batch">Seek a finished archive <span aria-hidden="true">→</span></Link>
+              <a className="stone-button sun-button" href="/build">Enter with an empty drive</a>
+              <a className="quiet-link" href="/founding-batch">Seek a finished archive <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <aside className="threshold-plaque" aria-label="Archive edition details">
@@ -74,7 +73,7 @@ export default function Home() {
           <div className="project-note">
             <p>Wayfarer&apos;s Archive is designed and maintained by Mr. Crowmeister as a practical preservation project: a way to carry useful knowledge beyond the reach of the network.</p>
             <div className="project-links">
-              <Link className="stone-button sun-button" href="/creator">Meet the Creator <span aria-hidden="true">→</span></Link>
+              <a className="stone-button sun-button" href="/creator">Meet the Creator <span aria-hidden="true">→</span></a>
               <a className="quiet-link light-link" href="https://www.patreon.com/c/MrCrowmeister" target="_blank" rel="noreferrer">Support the work on Patreon <span aria-hidden="true">↗</span></a>
             </div>
           </div>
