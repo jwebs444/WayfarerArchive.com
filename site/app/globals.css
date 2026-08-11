@@ -51,14 +51,7 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .threshold-plaque strong { font-family: Georgia, serif; font-size: 1rem; font-weight: 500; }
 .threshold-plaque span { border-top: 1px solid rgba(230,201,155,.25); color: rgba(234,214,181,.64); font-size: .55rem; line-height: 1.5; margin-top: .65rem; padding-top: .65rem; text-transform: uppercase; }
 
-.threshold { align-items: stretch; background: #d4bea0; display: grid; grid-template-columns: minmax(0, .8fr) minmax(18rem, .65fr) minmax(22rem, 1fr); min-height: 38rem; }
-.threshold-copy { align-self: center; padding: 6rem 2rem 6rem max(2rem, 7vw); }
-.threshold h2, .chambers h2, .founding-route h2, .compact h2, .questions h2, .last-light h2 { font-size: clamp(2.8rem, 5.4vw, 6rem); font-weight: 500; letter-spacing: -.055em; line-height: .9; margin: 0; }
-.threshold-note { align-self: center; border-left: 1px solid rgba(72,48,31,.38); color: #4f4136; font-family: Georgia, serif; font-size: 1rem; line-height: 1.8; margin: 4rem 2rem; padding-left: 2rem; }
-.threshold-photo { background: #1b1713; margin: 0; min-height: 38rem; overflow: hidden; position: relative; }
-.threshold-photo > div { background: url('/hero-library.png') 84% center / auto 130% no-repeat; filter: brightness(.72) saturate(.78); inset: 0; position: absolute; transform: scale(1.01); transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
-.threshold-photo:hover > div { transform: scale(1.04); }
-.threshold-photo figcaption { background: rgba(20,16,13,.78); border-top: 1px solid rgba(231,207,169,.35); bottom: 0; color: #e2cfb0; font-family: Georgia, serif; font-size: .78rem; font-style: italic; left: 0; line-height: 1.45; padding: 1.1rem 1.25rem; position: absolute; right: 0; }
+.chambers h2, .questions h2, .project-origin h2 { font-size: clamp(2.8rem, 5.4vw, 6rem); font-weight: 500; letter-spacing: -.055em; line-height: .9; margin: 0; }
 
 .chambers { background: #251c16; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .chambers article { min-height: 50rem; padding: clamp(5rem, 8vw, 9rem); position: relative; }
@@ -84,29 +77,6 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .workshop-chamber .button-disabled { background: rgba(26,20,16,.72); border-color: rgba(232,207,168,.42); color: #c9b99f; cursor: not-allowed; }
 .light-link { color: #ecd4ad; display: block; margin-top: .75rem; }
 
-.founding-route { background-color: #cbb291; background-image: linear-gradient(rgba(213,193,162,.91), rgba(213,193,162,.96)), url('/hero-library.png'); background-position: center; background-size: cover; padding: clamp(6rem, 9vw, 10rem) max(1.3rem, 8vw); }
-.route-heading { display: grid; gap: 2rem 7vw; grid-template-columns: minmax(15rem, .65fr) minmax(0, 1.35fr); }
-.route-heading h2 { grid-column: 1 / -1; max-width: 64rem; }
-.route-heading > p:last-child { align-self: end; color: #55483c; font-family: Georgia, serif; font-size: 1.02rem; grid-column: 2; line-height: 1.8; margin: 0; max-width: 42rem; }
-.cairn-route { display: grid; grid-template-columns: repeat(3, 1fr); margin: 6rem 0 4rem; }
-.cairn-route article { border-top: 1px solid rgba(71,49,34,.5); padding: 2.25rem 3rem 1rem 0; position: relative; }
-.cairn-route article > span { background: #5e4939; border-radius: 50% 50% 43% 48%; height: 17px; left: 0; position: absolute; top: -9px; transform: rotate(15deg); width: 27px; }
-.route-state { color: #6b4e39; font-size: .53rem; font-weight: 750; letter-spacing: .17em; text-transform: uppercase; }
-.cairn-route h3 { font-size: 1.45rem; margin: .7rem 0; }
-.cairn-route article > p:last-child { color: #55483c; line-height: 1.7; }
-.founding-call { align-items: center; background: rgba(30,24,19,.94); border: 1px solid #4d3a2c; box-shadow: 1rem 1rem 2rem rgba(62,40,25,.2); color: #e9d8ba; display: flex; gap: 3rem; justify-content: space-between; margin-left: 12%; padding: 1.6rem 2rem; }
-.founding-call p { font-family: Georgia, serif; line-height: 1.6; margin: 0; max-width: 44rem; }
-.founding-call .button { background: transparent; border: 1px solid #776b59; color: #bbb19e; flex: 0 0 auto; font-size: .56rem; font-weight: 750; letter-spacing: .14em; padding: 1rem 1.2rem; text-transform: uppercase; }
-
-.compact { background: linear-gradient(90deg, rgba(21,17,14,.96), rgba(21,17,14,.78)), url('/hero-library.png') 76% center / cover no-repeat; color: #eedcbd; display: grid; gap: 7vw; grid-template-columns: minmax(16rem, .65fr) minmax(0, 1.35fr); padding: clamp(6rem, 9vw, 10rem) max(1.3rem, 8vw); }
-.compact .wayfinding { color: #c99c64; }
-.vow-wall { border-left: 1px solid rgba(231,210,177,.3); }
-.vow-wall article { display: grid; gap: 1.2rem; grid-template-columns: 50px .8fr 1.2fr; padding: 2.3rem 0 2.3rem 2rem; }
-.vow-wall article + article { border-top: 1px solid rgba(231,210,177,.22); }
-.vow-wall article > span { color: #d4a66a; font-family: Georgia, serif; font-size: 1.45rem; }
-.vow-wall h3 { font-size: 1.25rem; margin: 0; }
-.vow-wall p { color: rgba(238,220,189,.67); line-height: 1.7; margin: 0; }
-
 .questions { background-color: #f0e4cf; background-image: radial-gradient(circle at 90% 5%, rgba(255,252,239,.72), transparent 30%), repeating-linear-gradient(90deg, rgba(62,41,27,.02) 0 1px, transparent 1px 8px); display: grid; gap: 8vw; grid-template-columns: minmax(15rem, .65fr) minmax(0, 1.35fr); padding: clamp(6rem, 9vw, 10rem) max(1.3rem, 8vw); }
 .question-stack { border-top: 1px solid var(--hairline); }
 .question-stack details { border-bottom: 1px solid var(--hairline); padding: 1.5rem 0; }
@@ -116,24 +86,23 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .question-stack details[open] summary span { transform: rotate(45deg); }
 .question-stack details p { color: #665a4e; line-height: 1.7; max-width: 45rem; }
 
-.last-light { background: linear-gradient(90deg, rgba(14,12,10,.91), rgba(14,12,10,.55) 52%, rgba(14,12,10,.2)), url('/hero-library.png') center 56% / cover no-repeat; color: #f0dfbf; min-height: 44rem; padding: clamp(7rem, 11vw, 12rem) max(1.3rem, 8vw); }
-.last-light .wayfinding { color: #d0a36a; }
-.last-light h2 { max-width: 59rem; text-shadow: 0 3px 18px #000; }
-.last-light > p:not(.wayfinding) { color: rgba(239,221,190,.77); font-family: Georgia, serif; font-size: 1.03rem; line-height: 1.75; max-width: 40rem; }
-.last-light .hero-actions { margin-top: 2.3rem; }
+.project-origin { align-items: end; background: linear-gradient(90deg, rgba(14,12,10,.94), rgba(14,12,10,.7) 58%, rgba(14,12,10,.35)), url('/hero-library.png') center 56% / cover no-repeat; color: #f0dfbf; display: grid; gap: clamp(3rem, 8vw, 9rem); grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .9fr); min-height: 38rem; padding: clamp(7rem, 10vw, 11rem) max(1.3rem, 8vw); }
+.project-origin .wayfinding { color: #d0a36a; }
+.project-origin h2 { max-width: 56rem; text-shadow: 0 3px 18px #000; }
+.project-note { border-left: 1px solid rgba(231,210,177,.4); padding-left: clamp(1.5rem, 3vw, 3rem); }
+.project-note > p { color: rgba(239,221,190,.82); font-family: Georgia, serif; font-size: 1.06rem; line-height: 1.8; margin: 0; max-width: 38rem; }
+.project-links { align-items: center; display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.3rem; }
+.project-links .light-link { margin-top: 0; }
 
 footer { align-items: center; background: #15120f; border-top: 1px solid #443124; color: rgba(233,216,187,.55); display: flex; font-size: .54rem; font-weight: 700; justify-content: space-between; letter-spacing: .13em; padding: 2.2rem clamp(1.1rem, 4.5vw, 5rem); text-transform: uppercase; }
 .footer-seal { align-items: center; color: #e2cfad; display: flex; gap: .8rem; }
 .footer-seal span { border: 1px solid #806748; border-radius: 50%; font-family: Georgia, serif; font-size: .52rem; padding: .55rem; }
 
 @media (max-width: 1040px) {
-  .threshold { grid-template-columns: 1fr 1fr; }
-  .threshold-photo { grid-column: 1 / -1; min-height: 30rem; }
-  .threshold-photo > div { background-position: 82% 55%; background-size: cover; }
   .chambers { grid-template-columns: 1fr; }
   .chambers article { min-height: auto; }
   .workshop-chamber { background-size: cover; }
-  .compact, .questions { grid-template-columns: 1fr; }
+  .questions, .project-origin { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
@@ -144,20 +113,9 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
   h1 { font-size: clamp(3.5rem, 17vw, 5.5rem); }
   .hero-copy { font-size: .95rem; }
   .threshold-plaque { margin-top: 2.5rem; max-width: none; position: static; }
-  .threshold { grid-template-columns: 1fr; }
-  .threshold-copy { padding: 5rem 1.3rem 2rem; }
-  .threshold-note { margin: 1rem 1.3rem 4rem; }
-  .threshold-photo { grid-column: 1; min-height: 27rem; }
-  .chambers article, .founding-route, .compact, .questions, .last-light { padding: 5.5rem 1.3rem; }
+  .chambers article, .questions, .project-origin { padding: 5.5rem 1.3rem; }
   .workshop-chamber { background-position: 76% center; }
-  .route-heading { grid-template-columns: 1fr; }
-  .route-heading h2, .route-heading > p:last-child { grid-column: 1; }
-  .cairn-route { grid-template-columns: 1fr; }
-  .cairn-route article { border-left: 1px solid rgba(71,49,34,.5); border-top: 0; padding: 0 0 3rem 2rem; }
-  .cairn-route article > span { left: -10px; top: 0; }
-  .founding-call { align-items: stretch; flex-direction: column; margin-left: 0; }
-  .vow-wall article { grid-template-columns: 36px 1fr; }
-  .vow-wall p { grid-column: 2; }
+  .project-note { border-left: 0; border-top: 1px solid rgba(231,210,177,.4); padding: 2rem 0 0; }
   footer { align-items: flex-start; flex-direction: column; gap: .75rem; }
   footer p { margin: 0; }
 }

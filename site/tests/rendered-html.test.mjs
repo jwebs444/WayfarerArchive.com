@@ -22,8 +22,11 @@ test("server-renders the Wayfarer's Archive storefront", async () => {
   assert.match(html, /Make the same archive yourself/);
   assert.match(html, /Founding batch/);
   assert.match(html, /Founding list opens after the pilot/);
-  assert.match(html, /No caravan leaves on a promise alone/);
   assert.match(html, /Builder opens with Edition I/);
+  assert.match(html, /A Mr\. Crowmeister project/);
+  assert.match(html, /https:\/\/mrcrowmeister\.com/);
+  assert.match(html, /https:\/\/www\.patreon\.com\/c\/MrCrowmeister/);
+  assert.doesNotMatch(html, /Between exposure and shelter|No caravan leaves on a promise alone|Three vows of the archive/);
   assert.doesNotMatch(html, /XOWA|Public edition 0\.7|313 commercially reusable diagrams/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|chatgpt\.site/i);
 });

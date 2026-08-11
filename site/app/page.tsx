@@ -1,11 +1,5 @@
 import FoundingBatchAction from "./components/FoundingBatchAction";
 
-const vows = [
-  ["Useful in silence", "Once assembled, the archive asks for no signal, account, activation, or subscription."],
-  ["Honest about its making", "Sources, licenses, exclusions, versions, and integrity records travel with the knowledge."],
-  ["Built at a human pace", "Workshop copies are prepared in small disclosed batches and tested before they leave shelter."],
-];
-
 const questions = [
   ["Must I buy a finished drive?", "No. The builder remains free. The workshop edition is simply for travelers who want a prepared, labeled, and individually tested copy."],
   ["What will the first edition contain?", "Current English Wikipedia in Kiwix, portable readers for the major desktop systems, rights-cleared media, launchers, attribution records, and verification tools."],
@@ -22,9 +16,10 @@ export default function Home() {
           <span><strong>Wayfarer&apos;s Archive</strong><small>Knowledge kept beyond the signal</small></span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#threshold">The threshold</a>
           <a href="#make">Build a copy</a>
           <a href="#commission">Founding batch</a>
+          <a href="#questions">Questions</a>
+          <a href="#project">The project</a>
         </nav>
       </header>
 
@@ -46,18 +41,6 @@ export default function Home() {
           </aside>
         </section>
 
-        <section className="threshold" id="threshold">
-          <div className="threshold-copy">
-            <p className="wayfinding">Between exposure and shelter</p>
-            <h2>The archive is not a monument. It is a place to take cover.</h2>
-          </div>
-          <p className="threshold-note">The desert is not decoration here. It is the condition that gives the library meaning: distance, scarcity, interrupted routes, and the need to carry what matters. The stone represents the opposite—shade, patience, memory, and a structure made to remain.</p>
-          <figure className="threshold-photo">
-            <div role="img" aria-label="The illuminated archive shelves seen through the shelter entrance" />
-            <figcaption>Past the wind line, the reference room remains ready.</figcaption>
-          </figure>
-        </section>
-
         <section className="chambers" aria-label="Ways to obtain the archive">
           <article className="open-chamber" id="make">
             <div className="chamber-mark" aria-hidden="true">I</div>
@@ -75,7 +58,7 @@ export default function Home() {
 
           <article className="workshop-chamber" id="commission">
             <div className="chamber-mark" aria-hidden="true">II</div>
-            <p className="wayfinding">The keeper&apos;s workshop</p>
+            <p className="wayfinding">The founder&apos;s workshop</p>
             <h2>Commission a field copy.</h2>
             <p className="chamber-lede">A finished Wayfarer is for someone who wants the refuge without first making the road: assembled, labeled, tested, and accompanied by its edition record.</p>
             <div className="batch-status">
@@ -84,40 +67,10 @@ export default function Home() {
             </div>
             <p>We will first build a pilot and measure the work honestly. Only then will a fixed number of places open with a published price and credible departure window.</p>
             <FoundingBatchAction />
-            <a className="quiet-link light-link" href="#founding-route">Read the founding route <span aria-hidden="true">↓</span></a>
           </article>
         </section>
 
-        <section className="founding-route" id="founding-route">
-          <div className="route-heading">
-            <p className="wayfinding">The route before commerce</p>
-            <h2>No caravan leaves on a promise alone.</h2>
-            <p>We will not disguise uncertainty as scarcity. The first paid batch opens only after the physical process has been walked from end to end.</p>
-          </div>
-          <div className="cairn-route">
-            <article><span aria-hidden="true" /><p className="route-state">Now</p><h3>Prove the edition</h3><p>Finish the rights audit, drive-capacity test, cross-platform launch test, and physical pilot.</p></article>
-            <article><span aria-hidden="true" /><p className="route-state">At the next marker</p><h3>Name the true cost</h3><p>Publish the device, labor, packaging, replacement reserve, batch size, and shipping window.</p></article>
-            <article><span aria-hidden="true" /><p className="route-state">When the path is known</p><h3>Open the gate briefly</h3><p>Invite only the number of founders the workshop can comfortably build and support.</p></article>
-          </div>
-          <div className="founding-call">
-            <p><strong>The founding list is a signal, not an order.</strong> Following the campaign will not reserve a drive or authorize a charge.</p>
-            <FoundingBatchAction />
-          </div>
-        </section>
-
-        <section className="compact" aria-labelledby="compact-title">
-          <div className="compact-title">
-            <p className="wayfinding">Carved into every edition</p>
-            <h2 id="compact-title">Three vows of the archive.</h2>
-          </div>
-          <div className="vow-wall">
-            {vows.map(([title, copy], index) => (
-              <article key={title}><span aria-hidden="true">{["◒", "◇", "⌁"][index]}</span><h3>{title}</h3><p>{copy}</p></article>
-            ))}
-          </div>
-        </section>
-
-        <section className="questions" aria-labelledby="questions-title">
+        <section className="questions" id="questions" aria-labelledby="questions-title">
           <div className="questions-heading">
             <p className="wayfinding">Questions carried to the door</p>
             <h2 id="questions-title">Before setting out.</h2>
@@ -127,11 +80,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="last-light">
-          <p className="wayfinding">Edition I is being assembled in public</p>
-          <h2>Keep a map. Keep a manual. Keep the encyclopedia.</h2>
-          <p>Build it freely when the edition is sealed, or follow the measured path toward a workshop-made copy.</p>
-          <div className="hero-actions"><a className="stone-button sun-button" href="#make">Follow the open passage</a><a className="quiet-link light-link" href="#commission">Visit the workshop</a></div>
+        <section className="project-origin" id="project" aria-labelledby="project-title">
+          <div>
+            <p className="wayfinding">A Mr. Crowmeister project</p>
+            <h2 id="project-title">Knowledge for the road beyond the signal.</h2>
+          </div>
+          <div className="project-note">
+            <p>Wayfarer&apos;s Archive is designed and maintained by Mr. Crowmeister as a practical preservation project: a way to carry useful knowledge beyond the reach of the network.</p>
+            <div className="project-links">
+              <a className="stone-button sun-button" href="https://mrcrowmeister.com" target="_blank" rel="noreferrer">Visit MrCrowmeister.com <span aria-hidden="true">↗</span></a>
+              <a className="quiet-link light-link" href="https://www.patreon.com/c/MrCrowmeister" target="_blank" rel="noreferrer">Support the work on Patreon <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
         </section>
       </main>
 
