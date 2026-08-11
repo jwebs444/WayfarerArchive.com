@@ -7,12 +7,12 @@ export function SiteHeader() {
         <span className="seal-mark" aria-hidden="true"><span>WA</span></span>
         <span><strong>Wayfarer&apos;s Archive</strong><small>Knowledge kept beyond the signal</small></span>
       </a>
+      <a className="header-support" href="https://www.patreon.com/c/MrCrowmeister" target="_blank" rel="noreferrer">Support <span aria-hidden="true">↗</span></a>
       <nav aria-label="Primary navigation">
-        <a href="/build">Build a copy</a>
-        <a href="/founding-batch">Founding batch</a>
+        <a href="/build">Build</a>
+        <a href="/founding-batch">Buy</a>
+        <a href="/build-beyond">Personalize</a>
         <a href="/creator">The Creator</a>
-        <a href="/build-beyond">Personal library</a>
-        <a className="support-link" href="https://www.patreon.com/c/MrCrowmeister" target="_blank" rel="noreferrer">Support <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
   );

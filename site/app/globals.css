@@ -19,20 +19,20 @@ img { display: block; height: auto; max-width: 100%; }
 .focal-image { height: 100%; object-fit: cover; object-position: var(--focus-x, 50%) var(--focus-y, 50%); width: 100%; }
 ::selection { background: var(--gold); color: var(--ink); }
 
-.gatehouse { align-items: center; background: linear-gradient(180deg, rgba(13,11,9,.78), rgba(13,11,9,.18), transparent); color: #f1dfbd; display: flex; inset: 0 0 auto; justify-content: space-between; min-height: 92px; padding: 0 clamp(1.1rem, 4.5vw, 5rem); position: absolute; z-index: 10; }
+.gatehouse { align-items: center; background: linear-gradient(180deg, rgba(13,11,9,.78), rgba(13,11,9,.18), transparent); color: #f1dfbd; display: grid; gap: .45rem 2rem; grid-template-columns: auto 1fr; grid-template-rows: auto auto; inset: 0 0 auto; min-height: 124px; padding: .85rem clamp(1.1rem, 4.5vw, 5rem); position: absolute; z-index: 10; }
 .gatehouse::after { background: rgba(236,214,177,.28); bottom: 0; content: ""; height: 1px; left: 4vw; position: absolute; right: 4vw; }
-.seal { align-items: center; display: flex; gap: .9rem; text-decoration: none; }
+.seal { align-items: center; display: flex; gap: .9rem; grid-row: 1 / span 2; text-decoration: none; }
 .seal-mark { border: 1px solid currentColor; border-radius: 50%; color: #e2b878; display: grid; height: 40px; place-items: center; position: relative; transform: rotate(-7deg); width: 40px; }
 .seal-mark::after { background: var(--gold); content: ""; height: 52px; position: absolute; transform: rotate(38deg); width: 1px; }
 .seal-mark span { font: 700 .625rem/1 Arial, sans-serif; letter-spacing: .08em; transform: rotate(7deg); }
 .seal strong, .seal small { display: block; }
 .seal strong { font-family: Georgia, serif; font-size: 1.03rem; font-weight: 500; letter-spacing: .035em; }
 .seal small { color: rgba(241,223,189,.63); font-size: .55rem; font-weight: 700; letter-spacing: .15em; margin-top: .3rem; text-transform: uppercase; }
-.gatehouse nav { display: flex; gap: clamp(1.2rem, 3vw, 3rem); }
+.gatehouse nav { display: flex; gap: clamp(1.2rem, 3vw, 3rem); grid-column: 2; grid-row: 2; justify-self: end; }
 .gatehouse nav a { border-bottom: 1px solid transparent; color: #e0d0b5; font-size: .58rem; font-weight: 700; letter-spacing: .17em; padding: .6rem 0; text-decoration: none; text-transform: uppercase; transition: border-color .2s, color .2s; }
 .gatehouse nav a:hover, .gatehouse nav a:focus-visible { border-color: var(--gold); color: #fff0d0; }
-.gatehouse nav .support-link { border: 1px solid rgba(224,208,181,.72); padding: .72rem .9rem; }
-.gatehouse nav .support-link:hover, .gatehouse nav .support-link:focus-visible { background: #d6a35f; border-color: #d6a35f; color: #1e1813; }
+.header-support { border: 1px solid rgba(224,208,181,.72); font-size: .52rem; font-weight: 750; grid-column: 2; grid-row: 1; justify-self: end; letter-spacing: .16em; padding: .58rem .82rem; text-decoration: none; text-transform: uppercase; transition: background .2s, border-color .2s, color .2s; }
+.header-support:hover, .header-support:focus-visible { background: #d6a35f; border-color: #d6a35f; color: #1e1813; }
 
 .sanctuary { align-items: end; background: #17130f; color: #f4e5c9; display: grid; isolation: isolate; min-height: max(48rem, 100svh); overflow: hidden; padding: 9rem clamp(1.2rem, 7vw, 8rem) clamp(3rem, 7vh, 5.5rem); position: relative; }
 .sanctuary::before { background-image: linear-gradient(90deg, #17130f 0%, rgba(23,19,15,.68) 8%, rgba(23,19,15,.06) 28%), linear-gradient(180deg, rgba(9,8,7,.08) 42%, rgba(9,8,7,.58) 100%), url('/hero-library-interior.png'); background-position: center, center, 84% 52%; background-repeat: no-repeat; background-size: cover; content: ""; inset: 0 0 0 44%; position: absolute; z-index: 0; }
@@ -211,10 +211,11 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
 }
 
 @media (max-width: 720px) {
-  .gatehouse { align-items: flex-start; flex-direction: column; gap: .65rem; justify-content: center; min-height: 112px; padding: .85rem; }
-  .gatehouse nav { display: grid; gap: 0 .8rem; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  .gatehouse { gap: .55rem .8rem; grid-template-columns: auto 1fr; min-height: 112px; padding: .85rem; }
+  .seal { grid-column: 1; grid-row: 1; }
+  .header-support { grid-column: 2; grid-row: 1; padding: .5rem .65rem; }
+  .gatehouse nav { display: grid; gap: 0 .8rem; grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-self: stretch; width: 100%; }
   .gatehouse nav a { font-size: .48rem; letter-spacing: .11em; padding: .38rem 0; }
-  .gatehouse nav .support-link { justify-self: start; padding: .5rem .65rem; }
   .seal small { display: none; }
   .sanctuary { align-items: end; min-height: auto; padding: 25rem 1.2rem 3.5rem; }
   .sanctuary::before { background-image: linear-gradient(180deg, rgba(9,8,7,.02) 50%, #17130f 100%), url('/hero-library-interior.png'); background-position: center, 86% 52%; height: 23rem; }
