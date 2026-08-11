@@ -156,7 +156,7 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
 .footer-seal span { border: 1px solid #806748; border-radius: 50%; font-family: Georgia, serif; font-size: .52rem; padding: .55rem; }
 
 @media (max-width: 1040px) {
-  .sanctuary { background-position: 92% center; }
+  .sanctuary { background-position: 92% center; background-size: auto 90%; }
   .sanctuary::before { background: linear-gradient(90deg, rgba(11,10,9,.8) 0%, rgba(12,10,8,.44) 48%, rgba(12,10,8,.06) 72%), linear-gradient(180deg, rgba(9,8,7,.04) 52%, rgba(9,8,7,.58) 100%); }
   .chambers { grid-template-columns: 1fr; }
   .chambers article { min-height: auto; }
