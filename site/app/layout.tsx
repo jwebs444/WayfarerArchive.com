@@ -6,7 +6,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const image = `${protocol}://${host}/og-wayfarer.png`;
+  const image = `${protocol}://${host}/og.png`;
   const title = "Wayfarer's Archive";
   const description = "Build a verified offline Wikipedia drive for free, or join a small founding batch for a finished Wayfarer's Archive field edition.";
   return {
@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     metadataBase: new URL(`${protocol}://${host}`),
     alternates: { canonical: "/" },
-    openGraph: { title, description, url: "/", siteName: title, images: [{ url: image, width: 1200, height: 630, alt: "Wayfarer's Archive — offline knowledge carried carefully" }] },
+    openGraph: { title, description, url: "/", siteName: title, images: [{ url: image, width: 1200, height: 630, alt: "Wayfarer's Archive — a library sheltered in desert stone" }] },
     twitter: { card: "summary_large_image", title, description, images: [image] },
   };
 }

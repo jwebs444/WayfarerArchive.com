@@ -18,12 +18,12 @@ test("server-renders the Wayfarer's Archive storefront", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /<title>Wayfarer(?:'|&#x27;)s Archive<\/title>/i);
-  assert.match(html, /Carry the reference shelf/);
-  assert.match(html, /Build your own/);
+  assert.match(html, /A refuge for knowledge/);
+  assert.match(html, /Make the same archive yourself/);
   assert.match(html, /Founding batch/);
   assert.match(html, /Founding list opens after the pilot/);
-  assert.match(html, /Payment only when the promise is credible/);
-  assert.match(html, /Installer arriving with Edition 1\.0/);
+  assert.match(html, /No caravan leaves on a promise alone/);
+  assert.match(html, /Builder opens with Edition I/);
   assert.doesNotMatch(html, /XOWA|Public edition 0\.7|313 commercially reusable diagrams/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|chatgpt\.site/i);
 });
