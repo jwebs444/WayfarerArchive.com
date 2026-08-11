@@ -14,7 +14,7 @@ export default function Home() {
         <section className="sanctuary" aria-labelledby="hero-title">
           <div className="approach">
             <p className="wayfinding">Wayfarer&apos;s Archive · Field Edition I</p>
-            <h1 id="hero-title">A refuge for knowledge <em>at the edge of the signal.</em></h1>
+            <h1 id="hero-title">A refuge for knowledge</h1>
             <p className="hero-copy">Carry a working encyclopedia through dead zones, broken infrastructure, and the ordinary places the network does not reach. Make the archive freely—or receive one prepared in a small workshop batch.</p>
           </div>
           <div className="hero-actions">
