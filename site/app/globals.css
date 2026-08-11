@@ -105,6 +105,11 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .project-links { align-items: center; display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.3rem; }
 .project-links .light-link { margin-top: 0; }
 
+@media (min-width: 1041px) {
+  .closing-screen { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); min-height: 100svh; }
+  .closing-screen .questions, .closing-screen .project-origin { min-height: 0; padding-block: clamp(3.5rem, 6vh, 6rem); }
+}
+
 .inner-page { background: #e9d8bb; }
 .inner-hero { align-items: end; background-color: #201914; background-repeat: no-repeat; background-size: cover; color: #f0dfbf; display: grid; gap: 7vw; grid-template-columns: minmax(0, 1.35fr) minmax(18rem, .65fr); min-height: 78svh; overflow: hidden; padding: 10rem max(1.3rem, 8vw) clamp(5rem, 9vw, 9rem); position: relative; }
 .inner-hero::before { background: linear-gradient(90deg, rgba(12,10,8,.9), rgba(12,10,8,.58) 62%, rgba(12,10,8,.28)); content: ""; inset: 0; position: absolute; }
