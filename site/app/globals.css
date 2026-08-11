@@ -235,14 +235,16 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
 @media (max-width: 720px) {
   .gatehouse { gap: .55rem .8rem; grid-template-columns: auto 1fr; min-height: 112px; padding: .85rem; }
   .seal { grid-column: 1; grid-row: 1; }
-  .header-support { grid-column: 2; grid-row: 1; padding: .5rem .65rem; }
-  .gatehouse nav { display: grid; gap: 0 .8rem; grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-self: stretch; width: 100%; }
-  .gatehouse nav a { font-size: .48rem; letter-spacing: .11em; padding: .38rem 0; }
+  .header-support { align-items: center; display: flex; grid-column: 2; grid-row: 1; min-height: 44px; padding: .5rem .65rem; }
+  .gatehouse nav { display: grid; gap: 0 .35rem; grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(4, minmax(0, 1fr)); justify-self: stretch; width: 100%; }
+  .gatehouse nav a { align-items: center; display: flex; font-size: .48rem; justify-content: center; letter-spacing: .09em; min-height: 44px; padding: .38rem 0; text-align: center; }
   .seal small { display: none; }
   .sanctuary { align-items: end; min-height: auto; padding: 25rem 1.2rem 3.5rem; }
   .sanctuary::before { background-image: linear-gradient(180deg, rgba(9,8,7,.02) 50%, #17130f 100%), url('/hero-library-interior.png'); background-position: center, 86% 52%; height: 23rem; }
   h1 { font-size: clamp(3.15rem, 14.5vw, 5.5rem); }
-  .hero-copy { font-size: .95rem; }
+  .approach { min-width: 0; width: 100%; }
+  .approach h1 { font-size: clamp(2.9rem, 13.2vw, 3.45rem); line-height: .86; }
+  .hero-copy { font-size: .95rem; margin-top: 1.5rem; }
   .hero-actions { align-items: stretch; flex-direction: column; width: min(100%, 22rem); }
   .hero-actions > a { width: 100%; }
   .hero-actions .quiet-link { align-items: center; display: flex; justify-content: center; text-align: center; }
@@ -256,7 +258,7 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
   .founding-hero { background-position: 74% 52%; }
   .beyond-hero { background-position: 76% 52%; }
   .ledger-heading, .manifest-section, .field-copy, .creator-story, .reader-kit, .shelf-heading { grid-template-columns: 1fr; }
-  .content-ledger, .batch-path, .manifest-section, .field-copy, .release-gate, .founding-interest, .creator-story, .creator-principles, .reader-kit, .field-shelf, .annex-boundary { padding: 5.5rem 1.3rem; }
+  .content-ledger, .batch-path, .manifest-section, .field-copy, .release-gate, .founding-interest, .creator-story, .creator-principles, .reader-kit, .field-shelf, .annex-boundary { padding: clamp(4.5rem, 18vw, 5.5rem) 1.3rem; }
   .manifest-list article { gap: .5rem; grid-template-columns: 1fr; }
   .creator-hero { background-position: center, 28% 56%; justify-content: flex-start; min-height: 48rem; padding: 10rem 1.3rem 5rem; }
   .creator-hero::before { background: linear-gradient(180deg, rgba(12,10,8,.06) 25%, rgba(12,10,8,.9)); content: ""; inset: 0; position: absolute; }
@@ -269,6 +271,45 @@ footer { align-items: center; background: #15120f; border-top: 1px solid #443124
   .stone-button, .button { max-width: 100%; text-align: center; }
   footer { align-items: flex-start; flex-direction: column; gap: .75rem; }
   footer p { margin: 0; }
+  footer { min-height: 9.25rem; }
+  .closing-screen .project-origin, .inner-page > section:last-child { min-height: calc(100svh - 9.25rem); }
+  .release-gate, .annex-boundary { align-content: center; display: grid; }
+}
+
+.approach,
+.inner-hero > div,
+.ledger-heading > *,
+.manifest-section > *,
+.field-copy > *,
+.creator-story > *,
+.reader-kit > *,
+.shelf-heading > *,
+.founding-interest > * { min-width: 0; }
+
+@media (orientation: landscape) and (max-height: 800px) and (min-width: 640px) and (max-width: 1040px) {
+  .gatehouse { min-height: 96px; padding-block: .6rem; }
+  .gatehouse nav a, .header-support { align-items: center; display: flex; min-height: 40px; }
+  .sanctuary { align-items: end; gap: 2rem; grid-template-columns: minmax(0, 1.2fr) minmax(15rem, .8fr); min-height: 100svh; padding: 6.75rem 2rem 1.5rem; }
+  .sanctuary::before { background-image: linear-gradient(90deg, #17130f 0%, rgba(23,19,15,.68) 8%, rgba(23,19,15,.06) 28%), linear-gradient(180deg, rgba(9,8,7,.08) 42%, rgba(9,8,7,.58) 100%), url('/hero-library-interior.png'); background-position: center, center, 86% 52%; background-size: cover; height: auto; inset: 0 0 0 45%; }
+  .approach { max-width: none; min-width: 0; }
+  .approach h1 { font-size: clamp(2.8rem, 6.2vw, 3.4rem); line-height: .84; }
+  .hero-copy { font-size: .82rem; line-height: 1.5; margin-top: 1rem; }
+  .hero-actions { align-items: stretch; flex-direction: column; gap: .9rem; justify-self: stretch; width: 100%; }
+  .hero-actions > a { width: 100%; }
+  .inner-hero { gap: 2rem; grid-template-columns: minmax(0, 1.25fr) minmax(15rem, .75fr); min-height: 100svh; padding: 6.75rem 2rem 1.75rem; }
+  .inner-hero .wayfinding { margin-bottom: .55rem; }
+  .inner-hero h1 { font-size: clamp(2.85rem, 5.8vw, 3.35rem); line-height: .84; }
+  .inner-hero > div > p:last-child { font-size: .88rem; line-height: 1.5; margin: .65rem 0 0; }
+  .inner-hero aside { padding: 1rem; }
+  .creator-hero { min-height: 100svh; padding: 6.75rem 2rem 1.75rem; }
+  .creator-hero > div { margin-left: auto; max-width: 31rem; width: 52%; }
+  .creator-hero h1 { font-size: clamp(3rem, 6.4vw, 3.65rem); }
+  .photo-caption { bottom: 1rem; }
+}
+
+@media (min-width: 3000px) {
+  html { font-size: clamp(18px, .55vw, 21px); }
+  .hero-actions { width: min(24rem, 30vw); }
 }
 
 @media (prefers-reduced-motion: reduce) {
