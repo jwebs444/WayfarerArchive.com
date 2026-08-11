@@ -3,7 +3,14 @@ staging/
 packages/
 .pnpm-store/
 .tmp-r2-uploader/
+WayfarerArchiveWeb/
 *.zip
 *.7z
 *.part
 *.log
+tmp/
+research/apocalypse-drive/
+research/mwoffliner/
+research/python-libzim/
+__pycache__/
+*.pyc
