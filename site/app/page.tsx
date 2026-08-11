@@ -49,6 +49,15 @@ export default function Home() {
           </article>
         </section>
 
+        <section className="questions" id="questions" aria-labelledby="questions-title">
+          <div className="questions-heading">
+            <h2 id="questions-title">Before setting out.</h2>
+          </div>
+          <div className="question-stack">
+            {questions.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}
+          </div>
+        </section>
+
         <section className="project-origin" id="project" aria-labelledby="project-title">
           <div>
             <p className="wayfinding">A Mr. Crowmeister project</p>
@@ -60,15 +69,6 @@ export default function Home() {
               <a className="stone-button sun-button" href="/creator">Meet the Creator <span aria-hidden="true">→</span></a>
               <a className="quiet-link light-link" href="https://www.patreon.com/c/MrCrowmeister" target="_blank" rel="noreferrer">Support the work on Patreon <span aria-hidden="true">↗</span></a>
             </div>
-          </div>
-        </section>
-
-        <section className="questions" id="questions" aria-labelledby="questions-title">
-          <div className="questions-heading">
-            <h2 id="questions-title">Before setting out.</h2>
-          </div>
-          <div className="question-stack">
-            {questions.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}
           </div>
         </section>
       </main>
