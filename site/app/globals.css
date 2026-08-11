@@ -60,8 +60,6 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
   .hero-actions { align-items: stretch; bottom: calc(clamp(3rem, 7vh, 5.5rem) + 1.6rem); left: 55vw; right: auto; width: min(20.5rem, 30vw); }
   .hero-actions > a { width: 100%; }
   .hero-actions .quiet-link { align-items: center; display: flex; justify-content: center; text-align: center; }
-  .chambers { min-height: 100svh; }
-  .chambers article { display: flex; flex-direction: column; justify-content: center; min-height: 100svh; }
 }
 .chambers h2, .questions h2, .project-origin h2 { font-size: clamp(2.8rem, 5.4vw, 6rem); font-weight: 500; letter-spacing: -.055em; line-height: .9; margin: 0; }
 
@@ -89,6 +87,19 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .workshop-chamber .button { background: #d5a566; border: 1px solid #d5a566; color: #241b15; display: inline-flex; font-size: .6rem; font-weight: 750; letter-spacing: .14em; margin: 1.25rem 0; min-height: 51px; padding: .95rem 1.25rem; text-decoration: none; text-transform: uppercase; }
 .workshop-chamber .button-disabled { background: rgba(26,20,16,.72); border-color: rgba(232,207,168,.42); color: #c9b99f; cursor: not-allowed; }
 .light-link { color: #ecd4ad; display: block; margin-top: .75rem; }
+
+@media (min-width: 1041px) {
+  .chambers { min-height: 100svh; }
+  .chambers article { display: flex; flex-direction: column; justify-content: flex-start; min-height: 100svh; padding-block: clamp(2rem, 4vh, 3.5rem); }
+  .chambers .wayfinding { margin-bottom: clamp(.8rem, 1.5vh, 1.5rem); }
+  .chamber-lede { margin-block: clamp(.8rem, 1.5vh, 1.5rem) clamp(1rem, 2vh, 2rem); }
+  .trail { margin-block: clamp(1rem, 2vh, 1.75rem); }
+  .trail li { padding-bottom: clamp(1.25rem, 2.5vh, 2rem); }
+  .trail li:last-child { padding-bottom: 0; }
+  .card-note { margin-top: auto; }
+  .batch-status { margin-block: clamp(1.5rem, 3vh, 2.5rem) clamp(1rem, 2vh, 1.75rem); }
+  .workshop-chamber > p:last-child { margin-top: auto; }
+}
 
 .questions { background-color: #f0e4cf; background-image: radial-gradient(circle at 90% 5%, rgba(255,252,239,.72), transparent 30%), repeating-linear-gradient(90deg, rgba(62,41,27,.02) 0 1px, transparent 1px 8px); display: grid; gap: 8vw; grid-template-columns: minmax(15rem, .65fr) minmax(0, 1.35fr); padding: clamp(6rem, 9vw, 10rem) max(1.3rem, 8vw); }
 .question-stack { border-top: 1px solid var(--hairline); }
