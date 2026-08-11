@@ -57,7 +57,7 @@ h1 em { color: #fff0d1; display: block; font-size: .55em; font-weight: 400; lett
 .quiet-link span { display: inline-block; margin-left: .4rem; }
 
 @media (min-width: 1041px) {
-  .hero-actions { align-items: stretch; bottom: clamp(8.5rem, 17vh, 10.5rem); left: 55vw; right: auto; width: min(20.5rem, 30vw); }
+  .hero-actions { align-items: stretch; bottom: calc(clamp(3rem, 7vh, 5.5rem) + 1.6rem); left: 55vw; right: auto; width: min(20.5rem, 30vw); }
   .hero-actions > a { width: 100%; }
   .hero-actions .quiet-link { align-items: center; display: flex; justify-content: center; text-align: center; }
 }
