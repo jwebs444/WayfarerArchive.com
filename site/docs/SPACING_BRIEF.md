@@ -145,3 +145,21 @@ Candidate results:
   media-query seams. After correction, all five routes were rerendered at
   720 x 500, 900 x 501, and 1024 x 768 with one-viewport heroes, complete
   first-view content, and zero document-level horizontal overflow.
+
+## Owner challenge replay for future reviews
+
+- Wayfarer was initially treated as the portfolio gold standard, yet its phone
+  heading still exceeded the document and the sanctuary visibly clipped
+  `KNOWLEDGE`. A clean desktop chapter ledger never substitutes for longest-word
+  and intrinsic-grid testing on phones.
+- At 844 x 390, require the last meaningful first-view element: primary action
+  on the homepage, complete status card on Founding Batch, and readable identity
+  plus copy on every inner route. A hero box measuring one viewport can still
+  hide or crop its task.
+- Attack every height-aware media query at width and height boundaries. The
+  720/721 and 500/501 seams are permanent regression cases, along with tablet
+  heights absorbed into the compact landscape treatment.
+- Creator must keep the raven and title in separate visual fields. Verify the
+  crop and contrast visually rather than concluding from grid columns alone.
+- On mobile, include the final callout and footer in one closing ledger and test
+  enlarged text, long Personalize links, and all 44-pixel navigation promises.

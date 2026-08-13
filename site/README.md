@@ -1,9 +1,6 @@
 # WayfarerArchive.com website
 
-The public storefront for <https://wayfarerarchive.com>. It has two jobs:
-
-1. Deliver the verified one-click archive builder when Edition 1.0 is ready.
-2. Explain and eventually sell capped workshop batches of finished drives.
+The public storefront and project website for <https://wayfarerarchive.com>.
 
 The current storefront intentionally does not accept payments. Physical orders
 open only after the pilot establishes cost, build time, failure allowance, and a
@@ -56,9 +53,8 @@ code while the batch is still in pilot testing.
 Do not set the preorder URL until the price, slot count, inventory, policies,
 and credible shipping window are published.
 
-## Release downloads
+## Repository scope
 
-Large release packages do not belong in Git. The final installer and its
-manifest will point to verified R2 objects behind a production custom domain.
-The public download endpoint remains disabled until every URL, byte count, and
-SHA-256 value has been independently checked.
+This repository contains only the website, its tests, documentation, and
+deployment configuration. Earlier Wikipedia-drive build experiments and
+downloadable installer artifacts are not part of this codebase.
