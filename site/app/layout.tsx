@@ -1,22 +1,13 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
+import { buildMetadata } from "./seo";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const image = `${protocol}://${host}/og.png`;
-  const title = "Wayfarer's Archive";
-  const description = "Build a verified offline Wikipedia drive for free, or join a small founding batch for a finished Wayfarer's Archive field edition.";
-  return {
-    title,
-    description,
-    metadataBase: new URL(`${protocol}://${host}`),
-    openGraph: { title, description, siteName: title, images: [{ url: image, width: 1200, height: 630, alt: "Wayfarer's Archive — a library sheltered in desert stone" }] },
-    twitter: { card: "summary_large_image", title, description, images: [image] },
-  };
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Wayfarer's Archive | Offline Knowledge Drive Project",
+  description:
+    "Follow Wayfarer's Archive as it validates a free builder for an offline Wikipedia drive and measures a possible small batch of prepared field editions.",
+  path: "/",
+});
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>{children}</body></html>;

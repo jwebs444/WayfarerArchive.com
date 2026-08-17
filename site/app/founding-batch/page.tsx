@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import FoundingBatchAction from "../components/FoundingBatchAction";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { buildMetadata } from "../seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Founding Batch | Wayfarer's Archive",
-  description: "The measured path toward a small founding batch of prepared, tested Wayfarer's Archive drives.",
-};
+  description:
+    "Follow the measured path toward a possible small founding batch of prepared Wayfarer's Archive drives. No payment or orders are accepted yet.",
+  path: "/founding-batch",
+});
 
 export default function FoundingBatchPage() {
   return (

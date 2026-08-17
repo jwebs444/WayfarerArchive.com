@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { buildMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Build a Copy | Wayfarer's Archive",
-  description: "How the Wayfarer's Archive builder will create a verified offline Wikipedia drive without requiring a second archive-sized copy.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Build an Offline Wikipedia Drive | Wayfarer's Archive",
+  description:
+    "See how the planned free Wayfarer's Archive builder will prepare and verify an offline Wikipedia drive after current validation is complete.",
+  path: "/build",
+});
 
 const contents = [
   ["The encyclopedia", "A current English Wikipedia ZIM selected to fit the edition's capacity and redistribution rules."],

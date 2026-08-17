@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { buildMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Personal Library | Wayfarer's Archive",
-  description: "Extend a Wayfarer's Archive drive with books, lectures, maps, and personal records you obtain and keep yourself.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Personal Offline Library | Wayfarer's Archive",
+  description:
+    "Learn how to extend a Wayfarer's Archive drive with books, lectures, maps, and personal records you lawfully obtain and keep yourself.",
+  path: "/build-beyond",
+});
 
 const formats = [
   ["PDF & EPUB", "Field manuals, books, papers, maps, and saved reference documents."],

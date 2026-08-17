@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { buildMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "The Creator | Wayfarer's Archive",
-  description: "Meet Mr. Crowmeister, the creator and keeper of Wayfarer's Archive.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Mr. Crowmeister | Creator of Wayfarer's Archive",
+  description:
+    "Meet Mr. Crowmeister, the field-minded maker, photographer, writer, traveler, creator, and keeper behind Wayfarer's Archive.",
+  path: "/creator",
+});
 
 export default function CreatorPage() {
   return (

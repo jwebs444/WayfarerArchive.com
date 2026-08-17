@@ -1,4 +1,5 @@
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
+import StructuredData from "./structured-data";
 
 const questions = [
   ["Must I buy a finished drive?", "No. The builder remains free. The workshop edition is simply for travelers who want a prepared, labeled, and individually tested copy."],
@@ -6,11 +7,51 @@ const questions = [
   ["Why is the founding batch not open yet?", "The pilot must reveal the true build time, media failure rate, packaging cost, and defensible shipping window before any money changes hands."],
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wayfarerarchive.com/#website",
+      url: "https://wayfarerarchive.com/",
+      name: "Wayfarer's Archive",
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://wayfarerarchive.com/#webpage",
+      url: "https://wayfarerarchive.com/",
+      name: "Wayfarer's Archive",
+      description:
+        "A project validating a free builder for an offline Wikipedia drive and measuring a possible workshop batch of prepared field editions.",
+      isPartOf: { "@id": "https://wayfarerarchive.com/#website" },
+      mainEntity: { "@id": "https://wayfarerarchive.com/#project" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://wayfarerarchive.com/#project",
+      name: "Wayfarer's Archive",
+      url: "https://wayfarerarchive.com/",
+      description:
+        "An offline-knowledge project designed to make a documented, verified encyclopedia archive portable beyond the network.",
+      creator: { "@id": "https://wayfarerarchive.com/#creator" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://wayfarerarchive.com/#creator",
+      name: "Mr. Crowmeister",
+      url: "https://wayfarerarchive.com/creator",
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
       <SiteHeader />
       <main id="top">
+        <StructuredData data={structuredData} />
         <section className="sanctuary" aria-labelledby="hero-title">
           <div className="approach">
             <h1 id="hero-title">A refuge for knowledge</h1>
