@@ -10,7 +10,7 @@ export function SiteHeader() {
       <a className="header-support" href="https://www.patreon.com/c/MrCrowmeister" target="_blank" rel="noreferrer">Support <span aria-hidden="true">↗</span></a>
       <nav aria-label="Primary navigation">
         <a href="/build">Build</a>
-        <a href="/founding-batch">Buy</a>
+        <a href="/founding-batch">Founding Batch</a>
         <a href="/build-beyond">Personalize</a>
         <a href="/creator">The Creator</a>
       </nav>
@@ -23,7 +23,7 @@ export function SiteFooter() {
     <footer>
       <div className="footer-seal"><span>WA</span><strong>Wayfarer&apos;s Archive</strong></div>
       <p>Offline knowledge, carried carefully.</p>
-      <p>Field Edition I · August 2026</p>
+      <p>Edition I · In validation</p>
     </footer>
   );
 }

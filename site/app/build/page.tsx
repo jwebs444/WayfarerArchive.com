@@ -43,7 +43,7 @@ export default function BuildPage() {
         <section className="release-gate">
           <p className="wayfinding">The release gate</p>
           <h2>Free when it is trustworthy.</h2>
-          <p>The installer will be published only after a complete build fits on the target drive, its critical files verify correctly, and the same finished archive launches on the supported desktop systems. Until then, no incomplete download is presented as ready.</p>
+          <p>The builder will be published only after a complete build fits on the target drive, its critical files verify correctly, and the same finished archive launches on the supported desktop systems. Until then, no incomplete download is presented as ready.</p>
         </section>
       </main>
       <SiteFooter />

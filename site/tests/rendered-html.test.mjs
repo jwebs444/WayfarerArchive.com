@@ -99,8 +99,9 @@ test("serves detailed build, build-beyond, founding batch, and creator pages", a
   assert.match(beyondHtml, /https:\/\/www\.wescecil\.com/);
 
   const foundingHtml = await (await render("/founding-batch")).text();
-  assert.match(foundingHtml, /A finished archive, made at a human pace/);
+  assert.match(foundingHtml, /A finished archive, planned at a human pace/);
   assert.match(foundingHtml, /Measure first\. Offer second/);
+  assert.match(foundingHtml, /No founding list is open yet/);
 
   const creatorHtml = await (await render("/creator")).text();
   assert.match(creatorHtml, /Mr\. Crowmeister/);

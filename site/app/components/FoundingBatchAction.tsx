@@ -23,7 +23,7 @@ export default function FoundingBatchAction() {
 
   return (
     <span className="button button-disabled" aria-disabled="true">
-      Founding list opens after the pilot
+      No founding list is open yet
     </span>
   );
 }

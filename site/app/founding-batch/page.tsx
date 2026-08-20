@@ -16,8 +16,8 @@ export default function FoundingBatchPage() {
       <SiteHeader />
       <main className="inner-page founding-page">
         <section className="inner-hero founding-hero">
-          <div><p className="wayfinding">The founder&apos;s workshop</p><h1>A finished archive, made at a human pace.</h1><p>The founding batch is for travelers who want a prepared, labeled, and individually tested field copy without assembling it themselves.</p></div>
-          <aside><span>Current state</span><strong>Interest gathering</strong><p>No payment is being collected and no delivery date is being promised.</p></aside>
+          <div><p className="wayfinding">The founder&apos;s workshop</p><h1>A finished archive, planned at a human pace.</h1><p>The possible founding batch is for travelers who want a prepared, labeled, and individually tested field copy without assembling it themselves.</p></div>
+          <aside><span>Current state</span><strong>Pilot not complete</strong><p>No order, reservation, payment, or delivery date is available.</p></aside>
         </section>
 
         <section className="batch-path">
@@ -35,7 +35,7 @@ export default function FoundingBatchPage() {
         </section>
 
         <section className="founding-interest">
-          <div><p className="wayfinding">Founding interest</p><h2>Follow the workshop, without placing an order.</h2><p>The list becomes actionable only after the pilot produces honest numbers.</p></div>
+          <div><p className="wayfinding">Founding interest</p><h2>Follow the workshop, without placing an order.</h2><p>A follow or preorder link will appear here only after the pilot establishes honest numbers.</p></div>
           <FoundingBatchAction />
         </section>
       </main>
